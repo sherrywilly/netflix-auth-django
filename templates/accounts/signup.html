@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'assets/css/sstyle.css' %}">
+</head>
+<div class="login-div">
+    <form class="login" method="post">
+        <h1>Sign up</h1>
+        {% csrf_token %}
+        <div class="input-text">
+            <input type="email" id="inputemail" name="email" placeholder="Email" onfocus="inputOnFocus(this)" onblur="inputOnBlur(this)"/>
+            <div class="warning-input" id="warningEmail">
+                Please enter a valid email.
+            </div>
+        </div>
+        
+        <div class="input-text">
+            <input type="password" id="inputPassword" name="password" placeholder="Password" onfocus="inputOnFocus(this)" onblur="inputOnBlur(this)"/>
+            <div class="warning-input" id="warningPassword">
+                Your password must contain between 4 and 60 characters.
+            </div>
+        </div>
+        <div class="input-text">
+            <input type="password" id="inputpassword" name="password2" placeholder="reenter password" onfocus="inputonfocus(this)" onblur="inputonblur(this)"/>
+        </div>
+            <div>
+                        <button class="signin-button">Sign up</button>
+             </div>
+    
+</body>
+</html>
